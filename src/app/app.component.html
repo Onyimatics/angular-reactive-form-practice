@@ -34,8 +34,12 @@
       <input type="text" formControlName="zip">
     </label>
   </div>
-  
+
   <button type="submit" [disabled]="!myForm.valid">Create</button>
+
+  <p>
+    <button (click)="updateModelPartially()">Update Partially</button>
+  </p>
 
 </form>
 

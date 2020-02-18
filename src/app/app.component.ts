@@ -25,6 +25,16 @@ export class AppComponent implements OnInit {
           })
     });
   }
+
+  updateModelPartially() {
+    this.myForm.patchValue({
+      firstName: 'Jimmy',
+      address: {
+        address1: 'Amboseli Apartment'
+      }
+    })
+  }
+
   onSubmit(form: FormGroup) {
     // console.log('Valid?', form.valid); // true or false
     // console.log('firstName', form.value.firstName);
@@ -36,6 +46,6 @@ export class AppComponent implements OnInit {
     console.log(this.myForm.get('age').value);
     console.log(this.myForm.get('email').value);
     console.log(this.myForm.get(['address', 'address1']).value);
-    console.log(this.myForm.get('address').get('address1').value);
+    console.log(this.myForm.get('address').get('address2').value);
   }
 }
