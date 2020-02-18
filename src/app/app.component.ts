@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
       age: new FormControl(''),
       email: new FormControl(''),
           address: new FormGroup({
-            address1: new FormControl(''),
+            address1: new FormControl('', Validators.required),
             address2: new FormControl(''),
             state: new FormControl(''),
             zip: new FormControl('')
@@ -35,5 +35,7 @@ export class AppComponent implements OnInit {
     console.log(this.myForm.get('lastName').value);
     console.log(this.myForm.get('age').value);
     console.log(this.myForm.get('email').value);
+    console.log(this.myForm.get(['address', 'address1']).value);
+    console.log(this.myForm.get('address').get('address1').value);
   }
 }

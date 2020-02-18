@@ -15,7 +15,28 @@
     Email:
     <input type="email" formControlName="email">
   </label>
+  <div formGroupName="address">
+    <h3>Address</h3>
+    <label>
+      Address 1:
+      <input type="text" formControlName="address1">
+    </label>
+    <label>
+      Address 2:
+      <input type="text" formControlName="address2">
+    </label>
+    <label>
+      State:
+      <input type="text" formControlName="state">
+    </label>
+    <label>
+      Zip:
+      <input type="text" formControlName="zip">
+    </label>
+  </div>
+  
   <button type="submit" [disabled]="!myForm.valid">Create</button>
+
 </form>
 
 <main>
